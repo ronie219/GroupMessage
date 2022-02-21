@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "a94483fc-9070-49d8-9c18-378f595e8d3c",
+		"name": "Group Message",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New Member",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Abhishek \",\r\n    \"last_name\": \"Biswas\",\r\n    \"email\" : \"abhishek.biswas219@gmail.com\",\r\n    \"password1\": \"Test123!\",\r\n    \"password2\": \"Test123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}account/user/",
+					"host": [
+						"{{URL}}account"
+					],
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get MemberDetail",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}account/user/2",
+					"host": [
+						"{{URL}}account"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete member",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}account/user/2",
+					"host": [
+						"{{URL}}account"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Member Details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\" : \"Abhishek\",\r\n    \"password1\" : \"Test123!\",\r\n    \"password2\" : \"Test123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}account/user/2",
+					"host": [
+						"{{URL}}account"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Login Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"abhishek.biswas219@gmail.com\",\r\n    \"password\" : \"Test123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}account/user/login",
+					"host": [
+						"{{URL}}account"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Creation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Test123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abhishek.biswas219@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"New Group\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/group/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/group/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add members to group",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Test123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abhishek.biswas219@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"group_id\": \"71dd20d3-d00f-4e4a-805e-4ddf36a6b774\",\r\n    \"user_id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/members/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"members",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Member",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Test123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abhishek.biswas219@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"group_id\": \"71dd20d3-d00f-4e4a-805e-4ddf36a6b774\",\r\n    \"user_id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/members/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"members",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All members of Group",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Test123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abhishek.biswas219@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"group_id\": \"71dd20d3-d00f-4e4a-805e-4ddf36a6b774\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/members/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"members",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message to group",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Test123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abhishek.biswas219@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"group_id\": \"71dd20d3-d00f-4e4a-805e-4ddf36a6b774\",\r\n    \"message\": \"Hi How are you?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/send/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"send",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all Message in Group",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"group_id\": \"71dd20d3-d00f-4e4a-805e-4ddf36a6b774\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/send/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"send",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like and Un Like Message",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message_id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}chat/like/",
+					"host": [
+						"{{URL}}chat"
+					],
+					"path": [
+						"like",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
